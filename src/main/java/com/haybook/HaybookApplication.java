@@ -9,4 +9,5 @@ public class HaybookApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HaybookApplication.class, args);
 	}
+
 }
