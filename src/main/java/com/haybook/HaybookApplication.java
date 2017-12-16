@@ -16,7 +16,6 @@ public class HaybookApplication implements ApplicationContextAware {
     void startup() {
         DbConnection dbConnectionImpl = (DbConnection) applicationContext.getBean("dbConnectionImpl");
         dbConnectionImpl.connect("adgh456122156");
-        System.out.println("Starting");
         System.out.println(dbConnectionImpl);
         DbConnection dbConnectionImpl2 = (DbConnection) applicationContext.getBean("dbConnectionImpl");
         System.out.println(dbConnectionImpl2);
