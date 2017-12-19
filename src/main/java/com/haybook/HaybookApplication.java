@@ -12,15 +12,6 @@ import javax.annotation.PostConstruct;
 public class HaybookApplication implements ApplicationContextAware {
     private ApplicationContext applicationContext;
 
-    @PostConstruct
-    void startup() {
-        DbConnection dbConnectionImpl = (DbConnection) applicationContext.getBean("dbConnectionImpl");
-        dbConnectionImpl.connect("adgh456122156");
-        System.out.println(dbConnectionImpl);
-        DbConnection dbConnectionImpl2 = (DbConnection) applicationContext.getBean("dbConnectionImpl");
-        System.out.println(dbConnectionImpl2);
-
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(HaybookApplication.class, args);
