@@ -23,9 +23,10 @@ public class HaybookApplication implements ApplicationContextAware {
     public void after() {
 
         User user = new User("email", "name");
-
         userRepository.create(user);
+        User u = userRepository.getById(0);
 
+        System.out.println(u);
     }
 
     @Override
