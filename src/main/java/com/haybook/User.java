@@ -11,6 +11,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    public User(String email, String username) {
+        this.username = username;
+        this.email = email;
+    }
+
     @Column
     private String username;
     @Column

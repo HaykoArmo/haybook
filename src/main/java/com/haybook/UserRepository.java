@@ -1,58 +1,16 @@
 package com.haybook;
 
 /**
- * Created by Hayk.dadian on 12/19/2017.
+ * Created by Hayk.dadian on 12/21/2017.
  */
+public interface UserRepository {
+    void create(User user);
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+    void delete(User user);
 
+    void update(User user);
 
-import javax.persistence.EntityManager;
+    User getById(long id);
 
-import javax.persistence.PersistenceContext;
-
-import javax.persistence.PersistenceContexts;
-import javax.transaction.Transactional;
-
-import java.util.List;
-
-
-@Repository
-
-@Transactional
-
-public class UserRepository {
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    // ------------------------
-
-    // PUBLIC METHODS
-
-    // ------------------------
-
-
-    /**
-     * Save the user in the database.
-     */
-
-    public void create(User user) {
-        entityManager.persist(user);
-    }
-
-
-    public void delete(User user) {
-
-        if (entityManager.contains(user))
-
-            entityManager.remove(user);
-
-        else
-
-            entityManager.remove(entityManager.merge(user));
-
-        return;
-
-    }
+    User getByEmail(String email);
 }
