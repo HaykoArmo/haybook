@@ -6,9 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import javax.annotation.PostConstruct;
-
+//aspecti hamara
+@EnableAspectJAutoProxy
 @SpringBootApplication
 public class HaybookApplication implements ApplicationContextAware {
     private ApplicationContext applicationContext;
