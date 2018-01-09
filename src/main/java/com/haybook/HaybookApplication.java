@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import javax.annotation.PostConstruct;
+
 //aspecti hamara
 @EnableAspectJAutoProxy
 @SpringBootApplication
@@ -34,5 +35,9 @@ public class HaybookApplication implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
+    }
+
+    public int sum(int a, int b) {
+        return a+b;
     }
 }
