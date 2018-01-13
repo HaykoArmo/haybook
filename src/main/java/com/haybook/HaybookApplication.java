@@ -23,15 +23,15 @@ public class HaybookApplication implements ApplicationContextAware {
         SpringApplication.run(HaybookApplication.class, args);
     }
 
-    @PostConstruct
-    public void after() {
-
-        User user = new User("email", "name");
-        userRepository.create(user);
-        User u = userRepository.getById(0);
-
-        System.out.println(u);
-    }
+//    @PostConstruct
+//    public void after() {
+//
+//        User user = new User("email", "name");
+//        userRepository.create(user);
+//        User u = userRepository.getById(0);
+//
+//        System.out.println(u);
+//    }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
